@@ -2,6 +2,11 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include nome_da_role"
+    - name: instalado GNU PG2
+      apt:
+        update_cache: yes
+        name: gnupg2
+        state: present
+    - name: "Include iac_role_runtime"
       include_role:
-        name: "nome_da_role"
+        name: "iac_role_runtime"

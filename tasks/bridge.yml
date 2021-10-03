@@ -1,0 +1,17 @@
+---
+- name: "Bridge network : Instalação do module br_netfilter"
+  community.general.modprobe:
+    name: br_netfilter
+    state: present
+
+- name: "Bridge network : Configuração do iptables para br_netfilter"
+  ansible.posix.sysctl:
+    name: "{{ item }}"
+    sysctl_set: yes
+    value: "1"
+    reload: yes
+    sysctl_file: /etc/sysctl.d/20-net-bridge.conf
+  loop:
+    - "net.bridge.bridge-nf-call-arptables"
+    - "net.bridge.bridge-nf-call-ip6tables"
+    - "net.bridge.bridge-nf-call-iptables"
