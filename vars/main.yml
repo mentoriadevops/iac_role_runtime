@@ -1,2 +1,4 @@
 ---
-# vars file for nome_da_role
+runtime_base_dependencies:
+  - curl
+  - gnupg2

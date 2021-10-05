@@ -1,4 +1,10 @@
 ---
+- name: "Instalando dependencias básicas"
+  apt:
+    pkg: "{{ runtime_base_dependencies }}"
+    state: present
+    update_cache: yes
+
 - include_tasks: "docker.yml"
   when: runtime_install_docker
 - include_tasks: "bridge.yml"
