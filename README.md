@@ -1,8 +1,13 @@
-# Template Role Ansible
+# iac_role_runtime
 
-![Pipeline Status](https://github.com/mentoriaiac/template-role-ansible/actions/workflows/ci.yml/badge.svg) 
+![Pipeline Status](https://github.com/mentoriaiac/iac_role_runtime/actions/workflows/ci.yml/badge.svg)
 
-Esse projeto tem a finalidade de ser um template para futuras criações de projetos que usem [ansible](https://docs.ansible.com/) e [molecule](https://molecule.readthedocs.io/en/latest/) (para teste do playbook).
+Esse projeto tem a finalidade de instalar e configurar componentes necessários
+para as partes de runtime da infraestrutura, como Kubernetes e Nomad.
+
+Atualmente as tarefas executadas por esse role são:
+  - Instalação e configuração do Docker.
+  - Habilitação e configuração do módule de kernel para redes em bridge.
 
 ## Dependências
 Para realizar os teste localmente é necessário a instalação das seguintes dependências:
@@ -42,4 +47,4 @@ Para realizar teste rápido após alguma modificação
 Ao termino do teste, destrua o ambiente
 ```bash
 (venv)$ molecule destroy
-``` 
+```

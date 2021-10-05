@@ -1,2 +1,5 @@
 ---
-# tasks file for nome_da_role
+- include_tasks: "docker.yml"
+  when: runtime_install_docker
+- include_tasks: "bridge.yml"
+  when: runtime_enable_bridge_network
