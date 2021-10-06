@@ -7,6 +7,7 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 
 ## [Não publicado]
 ### Adicionado
+- Instalação de dependencias básicas [[GH-3](https://github.com/mentoriaiac/iac_role_runtime/pull/3)]
 - Instalação e configuração de Docker e do módule de kernel de rede em bridge [[GH-1](https://github.com/mentoriaiac/iac_role_runtime/pull/1)]
 
 [Não publicado]: https://github.com/mentoriaiac/iac_role_runtime
