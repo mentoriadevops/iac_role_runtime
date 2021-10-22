@@ -9,9 +9,12 @@ platforms:
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     privileged: true
     pre_build_image: true
 provisioner:
   name: ansible
 verifier:
-  name: ansible
+  name: testinfra
+  env:
+    PYTHONWARNINGS: "ignore:.*U.*mode is deprecated:DeprecationWarning"
