@@ -1,2 +1,3 @@
 .venv/
 .cache/
+molecule/default/tests/__pycache__
