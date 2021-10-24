@@ -60,6 +60,3 @@ def test_bridge_config(host):
     for name in bridge:
         
         assert f.contains(name)
-
-
-
