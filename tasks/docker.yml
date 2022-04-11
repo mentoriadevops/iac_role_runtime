@@ -1,6 +1,6 @@
 ---
 - name: "Docker : Instalação dos pre-requisitos"
-  apt:
+  ansible.builtin.apt:
     pkg:
       - apt-transport-https
       - ca-certificates
@@ -8,12 +8,12 @@
     update_cache: yes
 
 - name: "Docker : Adicionando chaves gpg do repositório"
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     keyring: /usr/share/keyrings/docker-archive-keyring.gpg
 
 - name: "Docker : Instalando repositório apt"
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: >-
       deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg]
       https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
@@ -21,20 +21,20 @@
     filename: docker.list
 
 - name: "Docker : Criando diretorio /etc/docker"
-  file:
+  ansible.builtin.file:
     path: /etc/docker
     recurse: yes
     state: directory
     mode: "0644"
 
 - name: "Docker : Copiando arquivo de configuração do daemon"
-  copy:
+  ansible.builtin.copy:
     src: daemon.json
     dest: /etc/docker/daemon.json
     mode: "0644"
 
 - name: "Docker : Instalando pacotes"
-  apt:
+  ansible.builtin.apt:
     pkg:
       - "docker-ce={{ runtime_docker_ce_version }}"
       - "docker-ce-cli={{ runtime_docker_ce_version }}"

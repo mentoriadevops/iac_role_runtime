@@ -1,6 +1,6 @@
 ---
 - name: "Instalando dependencias básicas"
-  apt:
+  ansible.builtin.apt:
     pkg: "{{ runtime_base_dependencies }}"
     state: present
     update_cache: yes
