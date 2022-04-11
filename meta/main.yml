@@ -2,6 +2,8 @@ galaxy_info:
   author: "Felipe Nobrega - Dissipar - Mansur - Victor Braga - Roze Cardoso - Gazzinelli  - Gabriel Iglesias - CFLB - Juan Maia - Luiz Aoqui"
   description: Role para instalar e configurar dependências de runtime.
   company: Mentoria IaC
+  role_name: iac_role_runtime
+  namespace: mentoriaiac
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -14,9 +16,9 @@ galaxy_info:
   # - GPL-3.0-only
   # - Apache-2.0
   # - CC-BY-4.0
-  license: GPL-2.0-or-later
+  license: MIT
 
-  min_ansible_version: 2.1
+  min_ansible_version: "5.6"
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:
@@ -29,7 +31,8 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - 20.04
+        - bionic
+        - focal
 
   galaxy_tags: []
     # List tags for your role here, one per line. A tag is a keyword that describes
