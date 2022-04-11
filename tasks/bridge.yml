@@ -3,6 +3,7 @@
   ansible.builtin.apt:
     name: kmod
     state: present
+    update_cache: yes
 
 - name: "Bridge network : Instalação do module br_netfilter"
   community.general.modprobe:
