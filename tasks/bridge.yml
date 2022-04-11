@@ -1,4 +1,9 @@
 ---
+- name: "Bridge network : Instalação do modprobe"
+  ansible.builtin.apt:
+    name: kmod
+    state: present
+
 - name: "Bridge network : Instalação do module br_netfilter"
   community.general.modprobe:
     name: br_netfilter
