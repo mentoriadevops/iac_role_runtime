@@ -1,6 +1,6 @@
 {
   "exec-opts": [
-    "native.cgroupdriver=systemd"
+    "native.cgroupdriver={{ runtime_docker_cgroup_driver }}"
   ],
   "log-driver": "json-file",
   "log-opts": {
