@@ -3,4 +3,5 @@ runtime_install_docker: yes
 runtime_enable_bridge_network: yes
 
 runtime_docker_ce_version: "5:20.10.8~3-0~ubuntu-{{ ansible_distribution_release }}"
+runtime_docker_cgroup_driver: "cgroupfs"
 runtime_containerd_version: "1.4.9-1"

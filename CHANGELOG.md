@@ -7,6 +7,9 @@ e este projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/
 
 ## [Não publicado]
 
+### Adicionado
+- Configuração para cgroup driver do Docker [[GH-9](https://github.com/mentoriaiac/iac_role_runtime/pull/9)]
+
 ## [0.1.0] - 2021-10-05
 ### Adicionado
 - Instalação de dependencias básicas [[GH-3](https://github.com/mentoriaiac/iac_role_runtime/pull/3)]
